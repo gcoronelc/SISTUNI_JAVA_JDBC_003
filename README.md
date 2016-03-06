@@ -25,7 +25,12 @@
 - Repositorio de curso Java: https://github.com/gcoronelc/PECI-Java-MAR-2015
 - Curso virtual de Git: https://www.udemy.com/git-started-with-github/
 - Portal de cursos virtuales: http://www.librosdigitales.net
-
+- Oracle Tour 2012: http://www.peoug.org/oracleotn2012/
+- Oracle Tour 2013: http://www.peoug.org/otntour2013/
+- Oracle Tour 2014: http://www.peoug.org/otntour2014/
+- Oracle Tour 2015: http://www.peoug.org/otntour2015/
+- RichFaces is Dead: https://youtu.be/o7t3ABfWYLo
+- ¿Eres un recurso estratégico?: https://youtu.be/knZxhVck2mk
 
 # CLASE 01 
 
@@ -33,6 +38,14 @@
 - Revisado GitHub
 - Revisado Git
 - Instalar Oracle
+- Crear esquema Eureka
+- Conexión NetBeans - Oracle
+- API JDBC
+
+
+
+
+
 
 
 
