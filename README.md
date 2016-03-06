@@ -23,13 +23,17 @@
 - Libros de Oracle: http://gcoronelc.blogspot.pe/2011/02/libros-de-oracle.html
 - Recursos de Java: http://gcoronelc.blogspot.pe/p/java.html
 - Repositorio de curso Java: https://github.com/gcoronelc/PECI-Java-MAR-2015
-- Curso virtual de Git: https://www.udemy.com/learning-git/
+- Curso virtual de Git: https://www.udemy.com/git-started-with-github/
 - Portal de cursos virtuales: http://www.librosdigitales.net
 
 
 # CLASE 01 
 
 - Fecha: 06-MARZO-2016
+- Revisado GitHub
+- Revisado Git
+- Instalar Oracle
+
 
 
 
