@@ -4,7 +4,7 @@ try {
   // Inicia la Tx
   cn = AccesoDB.getConnection();
   cn.setAutoCommit(false);
-  
+  //
   
   // Confirma la Tx
   cn.commit();
