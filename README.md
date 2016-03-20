@@ -42,6 +42,11 @@
 - Conexión NetBeans - Oracle
 - API JDBC
 
+# CLASE 02
+
+- Fecha: 20-MARZO-2016
+- API JDBC
+
 
 
 
