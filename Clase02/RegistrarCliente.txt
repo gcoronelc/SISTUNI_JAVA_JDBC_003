@@ -1,0 +1,16 @@
+REGISTRAR UN NUEVO CLIENTE
+==========================
+Inicio de Transacción
+	1.- Leer el contador
+	2.- Actualizar el contador
+	3.- Generar el código
+	4.- Registrar el cliente
+Fin de transacción
+
+
+
+
+
+
+
+
