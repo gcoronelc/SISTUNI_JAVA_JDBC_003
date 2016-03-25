@@ -1,4 +1,5 @@
-![Java Web Services](https://raw.githubusercontent.com/gcoronelc/SISTUNI_JAVA_JDBC_003/master/JavaCS.png)
+![Java CLIENTE-SERVIDOR](https://raw.githubusercontent.com/gcoronelc/SISTUNI_JAVA_JDBC_003/master/JavaCS.png)
+![Java CLIENTE-SERVIDOR](https://raw.githubusercontent.com/gcoronelc/SISTUNI_JAVA_JDBC_003/master/promocion.jpg)
 
 # DESARROLLADOR DE APLICACIONES DE ESCRITORIO
 
