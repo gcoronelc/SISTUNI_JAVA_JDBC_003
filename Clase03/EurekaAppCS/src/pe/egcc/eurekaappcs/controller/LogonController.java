@@ -1,6 +1,8 @@
 package pe.egcc.eurekaappcs.controller;
 
+import pe.egcc.eurekaappcs.domain.Empleado;
 import pe.egcc.eurekaappcs.service.LogonService;
+import pe.egcc.eurekaappcs.util.Memoria;
 
 /**
  *
@@ -10,7 +12,8 @@ public class LogonController {
   
   public void validar(String usuario, String clave){
     LogonService service = new LogonService();
-    service.validar(usuario, clave);
+    Empleado bean = service.validar(usuario, clave);
+    Memoria.put("usuario", bean);
   }
    
 }
