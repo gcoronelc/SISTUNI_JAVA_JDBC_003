@@ -1,5 +1,7 @@
 package pe.egcc.eurekaappcs.service;
 
+import pe.egcc.eurekaappcs.dao.espec.EmpleadoDaoEspec;
+import pe.egcc.eurekaappcs.dao.impl.EmpleadoDaoImpl;
 import pe.egcc.eurekaappcs.domain.Empleado;
 
 /**
@@ -15,10 +17,12 @@ public class LogonService {
     if(clave == null || clave.isEmpty()){
       throw  new RuntimeException("Error, datos incorrectos.");
     }
-    if(!usuario.equals("gustavo")){
-      throw  new RuntimeException("Error, datos incorrectos.");
+    EmpleadoDaoEspec dao = new EmpleadoDaoImpl();
+    Empleado bean = dao.validar(usuario, clave);
+    if(bean == null){
+      throw new RuntimeException("Datos son incorrectos.");
     }
-    return null;
+    return bean;
   }
   
 }
