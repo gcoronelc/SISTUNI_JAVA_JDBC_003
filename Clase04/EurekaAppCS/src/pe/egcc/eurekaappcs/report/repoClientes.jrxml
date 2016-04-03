@@ -3,6 +3,7 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<parameter name="LOGO" class="java.io.InputStream" isForPrompting="false"/>
 	<queryString language="SQL">
 		<![CDATA[select 
 chr_cliecodigo,
@@ -21,7 +22,12 @@ from cliente]]>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch"/>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="228" height="49" uuid="bee724f8-7ada-41d7-9c27-d200352735fc"/>
+				<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
+			</image>
+		</band>
 	</title>
 	<pageHeader>
 		<band height="35" splitType="Stretch"/>

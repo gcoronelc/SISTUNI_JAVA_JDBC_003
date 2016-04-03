@@ -4,8 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
+import java.util.Map;
 import pe.egcc.eurekaappcs.dao.espec.EurekaDaoEspec;
 import pe.egcc.eurekaappcs.db.AccesoDB;
+import pe.egcc.eurekaappcs.util.JdbcUtil;
 
 /**
  *
@@ -71,6 +74,37 @@ public class EurekaDaoImpl implements EurekaDaoEspec {
       } catch (Exception e) {
       }
     }
+  }
+
+  @Override
+  public List<Map<String, ?>> getMovimientos(String cuenta) {
+    Connection cn = null;
+    List<Map<String, ?>> lista = null;
+    try {
+      cn = AccesoDB.getConnection();
+      String sql = "SELECT "
+              + "CUENCODIGO, MONENOMBRE, SUCUNOMBRE, "
+              + "CUENSALDO, CUENESTADO, MOVINUMERO, "
+              + "MOVIFECHA, TIPONOMBRE, TIPOACCION, "
+              + "MOVIIMPORTE FROM V_MOVIMIENTO "
+              + "WHERE CUENCODIGO = ? ";
+      PreparedStatement pstm = cn.prepareStatement(sql);
+      pstm.setString(1, cuenta);
+      ResultSet rs = pstm.executeQuery();
+      lista = JdbcUtil.rsToList(rs);
+      rs.close();
+      pstm.close();
+    } catch (SQLException e) {
+      throw new RuntimeException(e.getMessage());
+    } catch (Exception e) {
+      throw new RuntimeException("Error en el proceso, intentelo mas tarde.");
+    } finally {
+      try {
+        cn.close();
+      } catch (Exception e) {
+      }
+    }
+    return lista;
   }
 
 }
