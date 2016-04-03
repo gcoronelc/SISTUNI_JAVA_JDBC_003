@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="REPORTE DE CLIENTES" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="38b6b53c-6924-4ada-88b0-57374d5e0a29">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select 
+chr_cliecodigo,
+vch_cliepaterno,
+vch_cliematerno,
+vch_clienombre,
+chr_cliedni
+from cliente]]>
+	</queryString>
+	<field name="CHR_CLIECODIGO" class="java.lang.String"/>
+	<field name="VCH_CLIEPATERNO" class="java.lang.String"/>
+	<field name="VCH_CLIEMATERNO" class="java.lang.String"/>
+	<field name="VCH_CLIENOMBRE" class="java.lang.String"/>
+	<field name="CHR_CLIEDNI" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="20" uuid="7de2d8b2-cbdb-4229-b525-7ac24cf8d445"/>
+				<text><![CDATA[CHR_CLIECODIGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="20" uuid="688027c8-5022-4bf1-9f87-32092f481c0a"/>
+				<text><![CDATA[VCH_CLIEPATERNO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="20" uuid="c44b2578-2534-49dd-8a6f-4af1afe76bae"/>
+				<text><![CDATA[VCH_CLIEMATERNO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="20" uuid="9d57d618-250b-44c9-9447-fca15eb5b6bb"/>
+				<text><![CDATA[VCH_CLIENOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="20" uuid="2bc887f4-4d6e-4911-a0f3-3ebb5446b927"/>
+				<text><![CDATA[CHR_CLIEDNI]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="20" uuid="0d8bdc11-3469-487b-b7e6-222020611e74"/>
+				<textFieldExpression><![CDATA[$F{CHR_CLIECODIGO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="20" uuid="30c35298-65ce-43d9-83c8-bdaa5907c2ce"/>
+				<textFieldExpression><![CDATA[$F{VCH_CLIEPATERNO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="20" uuid="cdfb78c3-ec04-4a11-896e-d5aba377db73"/>
+				<textFieldExpression><![CDATA[$F{VCH_CLIEMATERNO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="20" uuid="207e56c6-b64d-43dc-9d47-9bf36dd6dfc4"/>
+				<textFieldExpression><![CDATA[$F{VCH_CLIENOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="20" uuid="c394f694-6100-48af-b6f0-44dc9848c119"/>
+				<textFieldExpression><![CDATA[$F{CHR_CLIEDNI}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
