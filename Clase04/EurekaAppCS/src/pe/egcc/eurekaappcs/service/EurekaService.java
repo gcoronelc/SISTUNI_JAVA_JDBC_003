@@ -1,5 +1,7 @@
 package pe.egcc.eurekaappcs.service;
 
+import java.util.List;
+import java.util.Map;
 import pe.egcc.eurekaappcs.dao.espec.EurekaDaoEspec;
 import pe.egcc.eurekaappcs.dao.impl.EurekaDaoImpl;
 
@@ -23,6 +25,10 @@ public class EurekaService {
        throw new RuntimeException("Error, importe no es valido.");
      }
      eurekaDao.procDeposito(cuenta, importe, codEmp);
+  }
+  
+  public List<Map<String, ?>> getMovimientos(String cuenta) {
+    return eurekaDao.getMovimientos(cuenta);
   }
   
 }

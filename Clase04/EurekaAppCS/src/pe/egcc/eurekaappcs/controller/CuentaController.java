@@ -1,5 +1,7 @@
 package pe.egcc.eurekaappcs.controller;
 
+import java.util.List;
+import java.util.Map;
 import pe.egcc.eurekaappcs.domain.Empleado;
 import pe.egcc.eurekaappcs.service.EurekaService;
 import pe.egcc.eurekaappcs.util.Memoria;
@@ -21,4 +23,7 @@ public class CuentaController {
     eurekaService.procDeposito(cuenta, importe, bean.getCodigo());
   }
   
+  public List<Map<String, ?>> getMovimientos(String cuenta) {
+    return eurekaService.getMovimientos(cuenta);
+  }
 }
