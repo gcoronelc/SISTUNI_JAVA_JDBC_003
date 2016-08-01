@@ -10,36 +10,31 @@ import pe.egcc.app.db.AccesoDB;
  *
  * @author Gustavo Coronel
  */
-public class Prueba04 {
+public class Prueba06 {
 
   public static void main(String[] args) {
     Connection cn = null;
     try {
-      // Leer el usuario
-      String usuario;
-      usuario = JOptionPane.showInputDialog("Ingrese usuario");
       // Proceso
       cn = AccesoDB.getConnection();
-      String sql = "Select * from empleado where vch_emplusuario = ? ";
+      String sql = "insert into parametro(chr_paracodigo,vch_paradescripcion,"
+              + "vch_paravalor,vch_paraestado) values(?,?,?,?) ";
       PreparedStatement pstm = cn.prepareStatement(sql);
-      pstm.setString(1, usuario);
-      ResultSet rs = pstm.executeQuery();
-      if(rs.next()){
-        String texto = rs.getString("CHR_EMPLCODIGO") +
-                " | " + rs.getString("VCH_EMPLPATERNO") +
-                " | " + rs.getString("VCH_EMPLUSUARIO");
-        System.out.println(texto);
-      }
-      rs.close();
+      pstm.setString(1, "010");
+      pstm.setString(2, "Profesor");
+      pstm.setString(3, "Gustavo Coronel");
+      pstm.setString(4, "ACTIVO");
+      int filas = pstm.executeUpdate();
+      System.out.println("Filas procesadas: " + filas);
       pstm.close();
     } catch (Exception e) {
       e.printStackTrace();
-    } finally{
+    } finally {
       try {
         cn.close();
       } catch (Exception e) {
       }
     }
   }
-  
+
 }
