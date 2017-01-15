@@ -22,7 +22,7 @@ from cliente]]>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch">
+		<band height="61" splitType="Stretch">
 			<image>
 				<reportElement x="0" y="0" width="228" height="49" uuid="bee724f8-7ada-41d7-9c27-d200352735fc"/>
 				<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
@@ -30,34 +30,60 @@ from cliente]]>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="35" splitType="Stretch"/>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="34" uuid="39beede9-8df9-43ce-9d93-807700d3e388"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE CLIENTES]]></text>
+			</staticText>
+		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="61" splitType="Stretch">
+		<band height="42" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="0" width="111" height="20" uuid="7de2d8b2-cbdb-4229-b525-7ac24cf8d445"/>
-				<text><![CDATA[CHR_CLIECODIGO]]></text>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[CODIGO]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="111" y="0" width="111" height="20" uuid="688027c8-5022-4bf1-9f87-32092f481c0a"/>
-				<text><![CDATA[VCH_CLIEPATERNO]]></text>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[PATERNO]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="222" y="0" width="111" height="20" uuid="c44b2578-2534-49dd-8a6f-4af1afe76bae"/>
-				<text><![CDATA[VCH_CLIEMATERNO]]></text>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[MATERNO]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="333" y="0" width="111" height="20" uuid="9d57d618-250b-44c9-9447-fca15eb5b6bb"/>
-				<text><![CDATA[VCH_CLIENOMBRE]]></text>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[NOMBRE]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="444" y="0" width="111" height="20" uuid="2bc887f4-4d6e-4911-a0f3-3ebb5446b927"/>
-				<text><![CDATA[CHR_CLIEDNI]]></text>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[DNI]]></text>
 			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" uuid="2c86c7ac-4632-4e91-9643-52313214f1e0"/>
+			</line>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="31" splitType="Stretch">
+		<band height="25" splitType="Stretch">
 			<textField>
 				<reportElement x="0" y="0" width="111" height="20" uuid="0d8bdc11-3469-487b-b7e6-222020611e74"/>
 				<textFieldExpression><![CDATA[$F{CHR_CLIECODIGO}]]></textFieldExpression>
@@ -80,13 +106,4 @@ from cliente]]>
 			</textField>
 		</band>
 	</detail>
-	<columnFooter>
-		<band height="45" splitType="Stretch"/>
-	</columnFooter>
-	<pageFooter>
-		<band height="54" splitType="Stretch"/>
-	</pageFooter>
-	<summary>
-		<band height="42" splitType="Stretch"/>
-	</summary>
 </jasperReport>

@@ -145,7 +145,7 @@ public class FormularioMDI extends javax.swing.JFrame {
       String fileLogo = "/pe/egcc/eurekaappcs/img/logo.gif";
       InputStream isLogo = Class.class.getResourceAsStream(fileLogo);     
       Map<String,Object> pars = new HashMap<>();
-      pars.put("LOGO", fileLogo);
+      pars.put("LOGO", isLogo);
       // Cargando el archivo compilado
       String fileRepo = "/pe/egcc/eurekaappcs/report/repoClientes.jasper";
       InputStream isRepo = Class.class.getResourceAsStream(fileRepo);
@@ -154,7 +154,7 @@ public class FormularioMDI extends javax.swing.JFrame {
 
       // Visualizando el Reporte
       JasperViewer viewer = new JasperViewer(jpRepo, false);
-      viewer.setTitle("Mi Reporte");
+      viewer.setTitle("REPORTE DE CLIENTES");
       viewer.setVisible(true);
 
     } catch (Exception e) {
